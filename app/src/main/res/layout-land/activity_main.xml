@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00FFFFFF"
+    android:backgroundTint="#00FFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/Background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <SeekBar
+        android:id="@+id/VolumeBar"
+        android:visibility="gone"
+        android:layout_width="189dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="264dp"
+        android:max="100"
+        android:progress="70"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="@+id/Cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.979"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Cover"
+        app:layout_constraintVertical_bias="0.42000002" />
+
+    <ImageView
+        android:id="@+id/Cover"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:elevation="100dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18" />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="After Midnight"
+        android:textAlignment="center"
+        android:textColor="#faefe0"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Cover"
+        app:layout_constraintStart_toStartOf="@+id/Cover"
+        app:layout_constraintTop_toBottomOf="@+id/Cover"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chappell Roan"
+        android:textColor="#faefe0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Title"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/Title"
+        app:layout_constraintTop_toBottomOf="@+id/Title"
+        app:layout_constraintVertical_bias="0.01999998" />
+
+    <TextView
+        android:id="@+id/Album"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Rise and Fall of a Midwest Princess"
+        android:textColor="#A9A8A8"
+        app:layout_constraintBottom_toTopOf="@+id/Cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.86" />
+
+    <ImageButton
+        android:id="@+id/Play"
+
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar"
+        app:layout_constraintStart_toStartOf="@+id/seekBar"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+
+    <ImageButton
+        android:id="@+id/Next"
+
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/Play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/Play"
+        app:layout_constraintTop_toTopOf="@+id/Play" />
+
+    <ImageButton
+        android:id="@+id/Previous"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/Play"
+        app:layout_constraintEnd_toStartOf="@+id/Play"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/Play" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="362dp"
+        android:layout_height="14dp"
+        android:max="100"
+        android:progress="25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/Artist"
+        app:layout_constraintVertical_bias="0.26" />
+
+    <TextView
+        android:id="@+id/Progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:00"
+        android:textColor="#faefe0"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+        app:layout_constraintEnd_toStartOf="@+id/seekBar"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+    <TextView
+        android:id="@+id/Duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:00"
+        android:textColor="#faefe0"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toEndOf="@+id/seekBar"
+        app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+    <ImageButton
+        android:id="@+id/Share"
+        android:layout_width="39dp"
+        android:layout_height="30dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.98"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Artist"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="?attr/actionModeShareDrawable"
+        app:tint="#faefe0" />
+
+    <ImageView
+        android:id="@+id/VolumeIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/Cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.24"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_lock_silent_mode_off"
+        app:tint="#faefe0" />
+
+    <ImageButton
+        android:id="@+id/Queue"
+        android:layout_width="38dp"
+        android:layout_height="31dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/Share"
+        app:layout_constraintEnd_toStartOf="@+id/Share"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/Share" />
+
+    <ImageButton
+        android:id="@+id/Lyrics"
+        android:layout_width="26dp"
+        android:layout_height="23dp"
+        android:background="@null"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/Queue"
+        app:layout_constraintEnd_toStartOf="@+id/Queue"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/Queue"
+        app:layout_constraintVertical_bias="0.454" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="498dp" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="450dp"
+        android:layout_height="350dp"
+        android:background="@drawable/rounded_bg"
+        android:clipToOutline="true"
+        android:scrollbars="vertical"
+        android:fadeScrollbars="false"
+        android:scrollbarStyle="insideOverlay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:lineSpacingExtra="4dp"
+                android:text="My mama said, &quot;Nothing good happens\n
+When it's late and you're dancing alone&quot;\n
+She's in my head saying, &quot;It's not attractive\n
+Wearing that dress and red lipstick&quot;\n\n
+
+This is what I wanted, this is what I like\n
+I've been a good, good girl for a long time\n
+But baby, I like flirting, a lover by my side\n
+Can't be a good, good girl even if I tried\n\n
+
+'Cause after midnight\n
+I'm feeling kinda freaky, maybe it's the club lights\n
+I kinda wanna kiss your girlfriend if you don't mind\n
+I love a little drama, let's start a bar fight\n
+'Cause everything good happens after midnight\n\n
+I'm feeling kinda freaky, maybe it's the moonlight\n
+I kinda wanna kiss your boyfriend if you don't mind\n
+I love a little &quot;uh-huh&quot;, let's watch the sunrise\n
+'Cause everything good happens after\n\n
+
+I really want your hands on my body\n
+A slow dance, baby, let's get it on\n
+That’s my type of fun, that's my kind of party\n
+Your hands on my body, your hot hands"
+                android:textAlignment="center"
+                android:textColor="#faefe0"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+</ScrollView>
+  </androidx.constraintlayout.widget.ConstraintLayout>
